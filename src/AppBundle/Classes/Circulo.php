@@ -17,11 +17,21 @@ class Circulo extends Figura implements FiguraInterface
 
     public function getSuperficie()
     {
-        return pi() * $this->radio ;
+        return $this->superficie;
     }
 
     public function getDiametro()
     {
-        return 2* $this->radio;
+        return $this->diametro;
+    }
+
+    public function getBase()
+    {
+        return null;
+    }
+
+    public function getAltura()
+    {
+        return null;
     }
 }

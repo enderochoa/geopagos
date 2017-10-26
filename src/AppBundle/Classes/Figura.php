@@ -1,12 +1,13 @@
 <?php
 namespace AppBundle\Classes;
 
-class Figura
+abstract class Figura
 {
     protected $tipo;
     protected $base;
     protected $altura;
-    protected $radio;
+    protected $superficie;
+    protected $diametro;
 
     /**
      * @return mixed
@@ -14,30 +15,6 @@ class Figura
     public function getTipo()
     {
         return $this->tipo;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBase()
-    {
-        return $this->base;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAltura()
-    {
-        return $this->altura;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRadio()
-    {
-        return $this->radio;
     }
 
     /**
@@ -64,14 +41,27 @@ class Figura
         return $this;
     }
 
+
     /**
-     * @param mixed $radio
+     * @param mixed $superficie
      *
      * @return self
      */
-    public function setRadio($radio)
+    public function setSuperficie($superficie)
     {
-        $this->radio = $radio;
+        $this->superficie = $superficie;
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $diametro
+     *
+     * @return self
+     */
+    public function setDiametro($diametro)
+    {
+        $this->diametro = $diametro;
 
         return $this;
     }

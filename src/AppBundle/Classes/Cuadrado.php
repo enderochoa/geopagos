@@ -17,10 +17,20 @@ class Cuadrado extends Figura implements FiguraInterface
 
     public function getSuperficie()
     {
-        return $this->base * $this->base;
+        return $this->superficie;
     }
 
     public function getDiametro()
+    {
+        return null;
+    }
+
+    public function getBase()
+    {
+        return $this->base;
+    }
+
+    public function getAltura()
     {
         return null;
     }

@@ -6,6 +6,7 @@ use AppBundle\Classes\FiguraFactory;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class FiguraController extends Controller
 {
@@ -14,16 +15,22 @@ class FiguraController extends Controller
      */
     public function indexAction(Request $request)
     {
-      $figura =FiguraFactory::create('cuadrado');
-      $figura->setBase(2);
-      $figura->setAltura(3);
+        $figuras = ['cuadrado','triangulo','circulo'];
+        foreach ($figuras as $nombre) {
+            $figura = FiguraFactory::create($nombre);
+            $figura->setBase(2);
+            $figura->setAltura(3);
+            $figura->setDiametro(4);
+            $figura->setSuperficie(5);
 
-      dump($figura->getSuperficie());
-      dump($figura->getDiametro());
+            echo "Figura de tipo ".$figura->getTipo()."<br />";
+            echo ($figura->getDiametro()?"..diametro:".$figura->getDiametro()."<br />":" ");
+            echo ($figura->getSuperficie()?"..superficie:".$figura->getSuperficie()."<br />":" ");
+            echo ($figura->getBase()?"..base:".$figura->getBase()."<br />":" ");
+            echo ($figura->getAltura()?"..altura:".$figura->getAltura()."<br />":" ");
+            echo "<br />";
+        }
 
-      // replace this example code with whatever you need
-      return $this->render('default/index.html.twig', [
-          'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-      ]);
+        return new Response();
     }
 }

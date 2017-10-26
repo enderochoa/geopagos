@@ -17,10 +17,21 @@ class Triangulo extends Figura implements FiguraInterface
 
     public function getSuperficie()
     {
-        return 0.5 * $this->base * $this->altura;
+        return $this->superficie;
     }
 
-    public function getDiametro(){
+    public function getDiametro()
+    {
         return null;
+    }
+
+    public function getBase()
+    {
+        return $this->base;
+    }
+
+    public function getAltura()
+    {
+        return $this->altura;
     }
 }
