@@ -130,8 +130,8 @@ class Usuario
         return $this->edad;
     }
 
-    public function __toString(){
+    public function __toString()
+    {
         return $this->usuario;
     }
 }
-

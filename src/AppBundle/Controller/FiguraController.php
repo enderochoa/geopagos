@@ -26,10 +26,10 @@ class FiguraController extends Controller
             $figura->setSuperficie(5);
 
             echo "Figura de tipo ".$figura->getTipo()."<br />";
-            echo ($figura->getDiametro()?"..diametro:".$figura->getDiametro()."<br />":" ");
-            echo ($figura->getSuperficie()?"..superficie:".$figura->getSuperficie()."<br />":" ");
-            echo ($figura->getBase()?"..base:".$figura->getBase()."<br />":" ");
-            echo ($figura->getAltura()?"..altura:".$figura->getAltura()."<br />":" ");
+            echo($figura->getDiametro()?"..diametro:".$figura->getDiametro()."<br />":" ");
+            echo($figura->getSuperficie()?"..superficie:".$figura->getSuperficie()."<br />":" ");
+            echo($figura->getBase()?"..base:".$figura->getBase()."<br />":" ");
+            echo($figura->getAltura()?"..altura:".$figura->getAltura()."<br />":" ");
             echo "<br />";
         }
 

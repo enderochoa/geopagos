@@ -98,4 +98,3 @@ class UsuarioPago
         return $this;
     }
 }
-
