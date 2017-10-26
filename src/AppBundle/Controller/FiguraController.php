@@ -11,10 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 class FiguraController extends Controller
 {
     /**
-     * @Route("/figura", name="figura_index")
+     * @Route("/", name="figura_index")
      */
     public function indexAction(Request $request)
     {
+        echo "Actividad 1 creacion de Figuras<br />";
+
         $figuras = ['cuadrado','triangulo','circulo'];
         foreach ($figuras as $nombre) {
             $figura = FiguraFactory::create($nombre);
@@ -31,6 +33,6 @@ class FiguraController extends Controller
             echo "<br />";
         }
 
-        return new Response();
+        return new Response("<a href='".$this->generateUrl('admin')."'>Actividad 2, Gestion de Usuarios y Pagos ");
     }
 }

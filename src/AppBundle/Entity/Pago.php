@@ -13,7 +13,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Pago
 {
-
     /**
      * @var int
      *
@@ -98,5 +97,9 @@ class Pago
     {
         return $this->fecha;
     }
-}
 
+    public function __toString()
+    {
+        return $this->importe.' de fecha '.$this->fecha->format('d/mY');
+    }
+}

@@ -43,7 +43,7 @@ class Usuario
      * @ORM\Column(name="edad", type="integer")
      * @Assert\Range(
      *      min = 18,
-     *      minMessage = "Por Introduzca un numero de DNI válido con solo numeros"
+     *      minMessage = "la edad debe ser mayor a 18"
      * )
      */
     private $edad;
@@ -128,6 +128,10 @@ class Usuario
     public function getEdad()
     {
         return $this->edad;
+    }
+
+    public function __toString(){
+        return $this->usuario;
     }
 }
 
