@@ -15,11 +15,6 @@ class Cuadrado extends Figura implements FiguraInterface
         $this->tipo='cudrado';
     }
 
-    public function getSuperficie()
-    {
-        return $this->superficie;
-    }
-
     public function getDiametro()
     {
         return null;

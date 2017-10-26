@@ -15,11 +15,6 @@ class Circulo extends Figura implements FiguraInterface
         $this->tipo='circulo';
     }
 
-    public function getSuperficie()
-    {
-        return $this->superficie;
-    }
-
     public function getDiametro()
     {
         return $this->diametro;

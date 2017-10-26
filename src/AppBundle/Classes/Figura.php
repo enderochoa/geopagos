@@ -9,6 +9,10 @@ abstract class Figura
     protected $superficie;
     protected $diametro;
 
+    abstract public function getDiametro();
+    abstract public function getBase();
+    abstract public function getAltura();
+
     /**
      * @return mixed
      */
@@ -64,5 +68,10 @@ abstract class Figura
         $this->diametro = $diametro;
 
         return $this;
+    }
+
+    public function getSuperficie()
+    {
+        return $this->superficie;
     }
 }

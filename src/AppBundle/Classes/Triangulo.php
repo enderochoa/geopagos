@@ -15,11 +15,6 @@ class Triangulo extends Figura implements FiguraInterface
         $this->tipo='triangulo';
     }
 
-    public function getSuperficie()
-    {
-        return $this->superficie;
-    }
-
     public function getDiametro()
     {
         return null;
