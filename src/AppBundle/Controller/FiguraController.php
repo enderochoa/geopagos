@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class FiguraController extends Controller
 {
+    //prueba
     /**
      * @Route("/", name="figura_index")
      */
